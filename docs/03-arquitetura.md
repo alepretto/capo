@@ -1,16 +1,20 @@
 # Arquitetura
 
-## Fechado para a bancada
+## Fechado
 
-API em FastAPI. A web de teste não é outro app: as páginas saem do mesmo processo, com template HTML. Um deploy na VM, o navegador do Pixel abre a conta, o upload e a confirmação da FIPE.
+API em FastAPI. Web de prototipagem em SvelteKit, na pasta `web/`. Os dois sobem na mesma VM, são processos diferentes e o mesmo repositório.
 
-Motivo: o corte desta fase é ler o PDF e travar a versão, não ter um frontend separado. FastAPI já é a stack dos outros backends. PDF se lê em Python. Svelte fica para se a tela crescer além do formulário.
+A web é onde as funcionalidades nascem: conta, cadastro, upload, FIPE, e depois o desenho 3D do carro e das peças. Não é um template HTML dentro da API. Formulario com 3D não cabe em página servida pelo FastAPI.
+
+SvelteKit porque o Friday Night web já era Svelte. O 3D não muda o framework: é Three.js, com Threlte por cima. React teria o ecossistema 3D maior (react-three-fiber), e não compensa trocar de stack por isso.
+
+O 3D não entra no primeiro corte. Primeiro a ficha confirma sem erro. Modelo do Polo e peça explodida vêm quando existir versão confirmada para pendurar a geometria.
 
 ## Ainda de fora
 
-- App nativo no Pixel. Entra quando a ficha confirmar sem erro. Aí o lançamento offline deixa de caber numa página.
-- Banco. Para a bancada, SQLite no mesmo processo chega. Postgres só se a cópia da v1.5 pedir.
-- Scanner, Bluetooth, fila, segundo serviço.
+- App nativo no Pixel. Entra quando o lançamento tiver que funcionar sem sinal.
+- Banco da bancada: SQLite no processo da API. Postgres só se a cópia da v1.5 pedir.
+- Scanner, Bluetooth, fila.
 
 ## Restrições que continuam
 
