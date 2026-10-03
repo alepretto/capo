@@ -9,6 +9,7 @@ Apelido do projeto: Capô. Slug do repositório: `capo` (o GitHub não aceita `�
 Stack e hospedagem ainda não foram escolhidas. O contrato atual é o escopo.
 
 - [docs/06-escopo.md](docs/06-escopo.md) — o que entra na v1, na v1.5 e na v2
+- [docs/07-cadastro-veiculo.md](docs/07-cadastro-veiculo.md) — conta, CRLV-e e confirmação da FIPE
 - [docs/00-visao.md](docs/00-visao.md) — por que existe
 - [docs/01-veiculo.md](docs/01-veiculo.md) — ficha do Polo
 - [docs/02-dominio.md](docs/02-dominio.md) — entidades
