@@ -5,16 +5,18 @@
 - Nome: Capô. Repositório público `alepretto/capo`.
 - Carro: Polo TSI manual 2023, baseline 38.000 km.
 - Foco: durabilidade do carro e do registro.
-- Fonte da verdade: o aparelho. Backend é cópia.
-- Exportação JSON/CSV é requisito, não extra.
+- Escopo antes da stack. Ver `docs/06-escopo.md`.
+- V1 é o diário local: ficha, hodômetro, abastecimento, serviço, plano, desgaste, documentos, custo e exportação.
+- V1.5 é a cópia numa VM barata. Hostinger ou equivalente. Um processo, um banco.
+- Scanner fica para a v2.
+- Fonte da verdade: o aparelho. Servidor é cópia.
 
-## Propostas, ainda abertas
+## Abertas
 
-- App em Kotlin + Compose no Pixel.
-- API em FastAPI + Postgres.
-- Scanner via ELM327 Bluetooth, sem apagar DTC antes de gravar.
-- Uma conta, um carro.
+- Linguagem do app e do backend.
+- Provedor exato da VM.
+- Como a foto da nota é guardada.
 
 ## Fora deste desenho
 
-- Arquivar os outros repositórios. O conector do GitHub disponível cria repo e envia arquivo, mas não arquiva. `friday-night-api` e `friday-night-web` já estavam arquivados. Os demais continuam ativos.
+- Arquivar os outros repositórios. O conector do GitHub não arquiva. `friday-night-api` e `friday-night-web` já estavam arquivados.
